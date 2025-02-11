@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Gesture Recognition</title>
+</head>
+<body>
+    <h1>Hand Gesture Recognition</h1>
+    <img id="video_feed" src="http://localhost:8000/video_feed_mp" alt="Hand Gesture Feed">
+
+    <script>
+        // Auto-refresh the video feed every 100 milliseconds
+        setInterval(function() {
+            document.getElementById('video_feed_mp').src = "http://localhost:8000/video_feed_mp?" + new Date().getTime();
+        }, 100);
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition</title>
+</head>
+<body>
+    <h1>Gesture Recognition with Haarcascade</h1>
+    <img src="http://localhost:8080/video_feed_haar" alt="Video Feed" width="640" height="480">
+
+    <!-- Optional: Add a refresh button
+    <button onclick="refreshVideo()">Refresh Video</button> -->
+
+    <script>
+        // Function to refresh the video feed       
+        function refreshVideo() {
+            // Change the source of the image to trigger a refresh
+            document.querySelector('img').src = "http://localhost:8080/video_feed_haar?" + new Date().getTime();
+        }
+    </script>
+</body>
+</html>
